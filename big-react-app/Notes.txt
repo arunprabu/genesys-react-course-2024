@@ -240,9 +240,9 @@ Cross Component Communication
 
 Core Concepts of React 
 ----
-  Props 
-  States 
-  Events 
+  Props [DONE]
+  States [DONE]
+  Events [DONE]
   Lists & Keys
   Conditional Rendering 
   Styling 
@@ -258,6 +258,9 @@ Advanced Concepts
   ...
   ...
 
+Routing
+----  
+
 Features
 ---
   1. Netflix 
@@ -269,6 +272,11 @@ Features
 
 Project Structure
 ------
+__tests__/
+  unit-tests/
+    layouts/
+      Header.test.tsx
+  e2e/
 src/
   layouts/
     Header.tsx 

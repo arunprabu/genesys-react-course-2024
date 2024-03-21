@@ -1,1 +1,5 @@
 1. Make sure copyrightYear in footer is dynamic with new Date()
+2. Display image in Hero block of the HomePage.tsx 
+  Refer: https://undraw.co/illustrations
+  Refer: https://www.manypixels.co/gallery
+
