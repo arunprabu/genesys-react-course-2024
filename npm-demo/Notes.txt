@@ -1,0 +1,49 @@
+NodeJS Ecosystem 
+-----
+  create a directory
+  there should be a package.json file 
+
+  NPM Dependencies
+    1. Dependencies a.k.a Project Dependencies
+        * some packages are needed for the feature / functionality of the app to work
+        * examples: dropzone, bootstrap
+
+        npm i bootstrap (or)   
+        npm i bootstrap --save (or)
+        npm i bootstrap -S (or)
+        npm i --save bootstrap (or)
+        npm i -S bootstrap 
+
+        npm update bootstrap 
+        npm uninstall bootstrap
+
+
+    2. Dev Dependencies 
+        * some packages are needed during the development
+        * some packages are needed just for the app to be developed
+        * Dev dependencies are for the development workflow
+        * example: typescript, sass, less, jest, jasmine, webpack, vite, grunt, gulp, browserify
+
+        npm i typescript --save-dev (or)
+        npm i typescript -D (or)
+        npm i --save-dev typescript (or)
+        npm i -D typescript
+
+        npm update typescript -D
+        npm uninstall typescript -D
+    
+    3. Global Dependencies
+        * installed in your computer -- not inside specific project folder
+        * most of the tools are Command Line Interfaces (cli)
+        * TODO: Where will global dependencies be installed in windows / mac? 
+
+        npm i nodemon -g (or)
+        npm i -g nodemon (or)
+        npm i nodemon --global (or)
+        npm i --global nodemon 
+
+        npm update nodemon -g
+        npm uninstall nodemon -g 
+
+    4. Peer Dependencies (TODO: Explore this)
+

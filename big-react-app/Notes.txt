@@ -1,0 +1,300 @@
+Website / webapp can be built with
+---
+  1. Structural Layer  -- HTML
+  2. Presentation Layer -- CSS 
+  3. Interaction Layer -- JS 
+
+Browser
+----
+  HTML Renderer
+  CSS Parser 
+  JS Engine 
+
+
+Topics Not covered:
+---
+  HTML 5 JS API - Demo 
+    Local Storage, Session Storage
+
+  Storing Info in browser 
+  ---
+    1. Cookies 
+    2. Web Storage
+      2.1 LocalStorage (Permanent)
+      2.2 SessionStorage (Temporary)
+  
+
+Websites
+---
+  1. static website 
+  2. dynamic websites 
+
+Web Apps
+----
+  1. Server Side Rendering (SSR) Apps / Traditional Webapps 
+      * Pages will refresh
+
+      Arch: 1 Server (port 8080)
+        Req: localhost:8080
+        Response: HTML, CSS, JS, Data
+
+      Codebase: 
+        HTML, CSS, JS + Backend (PHP/Java/.Net) + DB Queries
+
+      Adv:
+      ----
+        1. Search Engine Friendly
+        2. Initial Loading Time will be minimal
+      
+      Disadv:
+      ----  
+        1. Server has to do the heavy-lifting
+        2. Slower Webapps 
+        3. Huge Bandwidth Consumption
+        4. Expensive 
+        5. UX is bad 
+
+  2. Client Side Rendering (CSR) Apps  / Modern Webapps = SPA + Rest API
+      * Pages will NOT Refresh
+
+      Arch:
+        2 Servers 
+          1 Front End Server (port: 3000) 
+            Req: localhost:3000
+            Response: HTML, CSS, JS, No Data (but placeholder for the data)
+          
+          1 Back End Server (port: 8081)
+            Req: localhost:8081
+            Response: Data (JSON)
+
+      Codebase:
+        Front End App: HTML, CSS, JS  (Single Page App - SPA -- We will Develop)
+        Back End App: PHP/Java/.Net + DB Queries  (RESTful API -- We wont develop)
+
+      Adv:
+      ---
+        1. Server's workload is shared between two servers 
+        2. Faster Web apps 
+        3. Less Bandwidth Consumption
+        4. Not Expensive 
+        5. UX is good 
+
+      Disadv:
+      ---
+        1. Not Search Engine Friendly (can be fixed with Next Js)
+        2. Initial Loading will take longer (can be fixed)
+
+
+Single Page App 
+-----
+  7 characteristics
+
+  1. Pages should NOT refresh
+  2. URL should change 
+  3. History should be maintained w/o page refresh 
+  4. Retain Header and Footer
+  5. Section in between header and footer should show contextual updates
+  6. Active menu should be set 
+  7. Page Title should also be updated 
+
+
+  SPA Frameworks / Libraries 
+  -------
+    #1 React JS (Library -- Build User Interface)
+    #2 VueJS (Framework)
+    #3 Angular (Framework)
+    #4 Svelte (Framework)
+
+=============
+
+Progressive Web App (PWA)
+-----
+  * Installable Web App in Desktops (win/mac/linux) and Mobiles (android)
+  * No support for PWA in iOS 
+
+
+2 Ways to create react project 
+---
+  1. with JavaScript 
+  2. with TS (Recommended)
+
+Build Systems / Module Bundlers 
+-----
+  1. webpack (Recommended)
+  2. vite (Modern)
+
+Create project 
+====
+  npm create vite@latest 
+
+----
+File Walkthru [DONE]
+Arch [DONE]
+How react apps are running? [DONE]
+
+
+Thinking in React
+-----
+  1. Identify the number of components 
+  2. Understand the hierarchy of the components
+  3. other concepts
+
+
+Components
+-----
+  * Reusable block of code 
+
+  2 Types of Components in React 
+  -----
+    1. Functional Components (Recommended)
+        * created with functions 
+        1.1 Functional Component with Named Function 
+        1.2 Functional component with Anonymous function
+        1.3 Functional component with Arrow function [RECOMMENDED]
+
+    2. Class Components (NOT Recommended since 2020)
+        * quick intro
+        * created with class
+
+JSX 
+---
+  * will look like HTML but not
+  * all tags must be either self closed / separately closed 
+  * all class attributes should become className
+
+======
+Naming Conventions & Casing 
+----
+  Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * also Recommended for Interface in TypeScript 
+        * Recommended for React Components and the folder of Components
+
+        examples 
+        ---
+          class CarDetails {
+
+          }
+
+          interface Employee {
+
+          }
+
+          const MenuList = () =>  { // functional component
+            // returns JSX
+          }
+
+          export default Footer;
+
+    2. camelCase 
+        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for id's of html elements 
+        * Recommended for variables, const, fn, methods, event handlers of React Component
+        
+        examples 
+        -----
+          var myCar = 'BMW';
+          var isLoggedIn = true;
+
+          function getCarInfo() {
+            //....
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names, assets in front end projects  
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect says ok
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case 
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;
+
+----------------
+
+
+Cross Component Communication
+----
+  1. Parent to Child Component Communication
+      using Props 
+
+  2. Child to Parent Component Communication [TODO]
+      using Props with Events and callback function 
+
+  3. Any to Any Component Communication
+      3.1 using Context API in React JS
+      3.2 using Redux / Redux-Toolkit / zustand / MobX / recoil / Flux
+
+
+Core Concepts of React 
+----
+  Props 
+  States 
+  Events 
+  Lists & Keys
+  Conditional Rendering 
+  Styling 
+
+
+Advanced Concepts 
+----
+  Forms
+  API Calls 
+  Context 
+  Fragments
+  Hooks
+  ...
+  ...
+
+Features
+---
+  1. Netflix 
+  2. CRU(D) App  (User management app)
+  3. Todo App 
+  4. E-Com Style of App (Product Listing & Add to cart)
+  5. Authentication
+
+
+Project Structure
+------
+src/
+  layouts/
+    Header.tsx 
+    Footer.tsx 
+    MenuList.tsx
+  components/   (only reusable components in multiple features / pages )
+  pages/
+    HomePage/
+      HomePage.tsx
+    NetflixPage/
+      NetflixPage.tsx 
+    UserManagementPage/
+      UserManagementPage.tsx
+    TodoPage/
+      TodoPage.tsx 
+    ProductsPage/
+      ProductsPage.tsx 
+    AuthPage/
+      AuthPage.tsx
+      Login.tsx 
+      Signup.tsx 
+      ResetPassword.tsx 
+      VerifyEmail.tsx
+    
+
+
+
+  
+

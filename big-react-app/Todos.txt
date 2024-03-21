@@ -1,0 +1,1 @@
+1. Make sure copyrightYear in footer is dynamic with new Date()
