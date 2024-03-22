@@ -1,5 +1,10 @@
-1. Make sure copyrightYear in footer is dynamic with new Date()
-2. Display image in Hero block of the HomePage.tsx 
+1. Make sure copyrightYear in footer is dynamic with new Date() [REVIEWED]
+2. Display image in Hero block of the HomePage.tsx [REVIEWED]
   Refer: https://undraw.co/illustrations
   Refer: https://www.manypixels.co/gallery
-
+3. Implement Child to Parent Component Communication 
+    in RecommendedShow to RecommendedShowList.
+    pass the event handler as prop into the child comp 
+      and call the event handler from child comp 
+        then, update the ui
+    

@@ -227,7 +227,7 @@ Naming Conventions & Casing
 
 Cross Component Communication
 ----
-  1. Parent to Child Component Communication
+  1. Parent to Child Component Communication [DONE]
       using Props 
 
   2. Child to Parent Component Communication [TODO]
@@ -243,8 +243,8 @@ Core Concepts of React
   Props [DONE]
   States [DONE]
   Events [DONE]
-  Lists & Keys
-  Conditional Rendering 
+  Lists & Keys [DONE]
+  Conditional Rendering [DONE]
   Styling 
 
 
@@ -300,6 +300,14 @@ src/
       Signup.tsx 
       ResetPassword.tsx 
       VerifyEmail.tsx
+   hooks/
+   contexts/
+   models/   (can have interfaces for the whole app)
+    IShow.tsx
+
+
+
+    
     
   
 

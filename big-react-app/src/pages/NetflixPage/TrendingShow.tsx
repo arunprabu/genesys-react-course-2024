@@ -1,4 +1,6 @@
 interface TrendingShowProps {
+  id?: number; // id is optional
+  trendingRank: number;
   title: string;
   thumbnailUrl: string;
   category: string;
@@ -6,26 +8,30 @@ interface TrendingShowProps {
   children: string;
 }
 
-const TrendingShow: React.FC<TrendingShowProps> = (props) => {
+const TrendingShow: React.FC<TrendingShowProps> = ({
+  title,
+  trendingRank,
+  thumbnailUrl,
+  category,
+  publishedOn,
+  children,
+}) => {
   return (
     <div className="card">
-      <img
-        src={props.thumbnailUrl}
-        className="card-img-top"
-        alt={props.title}
-      />
+      <img src={thumbnailUrl} className="card-img-top" alt={title} />
       <div className="card-body">
-        <h5 className="card-title">{props.title}</h5>
-        <p className="card-text">{props.children}</p>
+        <h5 className="card-title">{title}</h5>
+        <span className="badge rounded-pill text-bg-dark">
+          Trending at #{trendingRank}
+        </span>
+        <p className="card-text">{children}</p>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">{props.category}</li>
-        <li className="list-group-item">published {props.publishedOn}</li>
+        <li className="list-group-item">{category}</li>
+        <li className="list-group-item">published {publishedOn}</li>
       </ul>
       <div className="card-body">
-        <a href="#" className="btn btn-primary">
-          Watch Now
-        </a>
+        <button className="btn btn-success">Add to Watchlist -- N/A</button>
       </div>
     </div>
   );
