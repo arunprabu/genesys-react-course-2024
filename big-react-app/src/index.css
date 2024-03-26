@@ -2,3 +2,7 @@
   * ideal place for global styles 
   * you can override bootstrap styles here
 */
+
+.red-text {
+  color: red;
+}

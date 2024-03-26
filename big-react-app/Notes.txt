@@ -161,6 +161,7 @@ JSX
   * will look like HTML but not
   * all tags must be either self closed / separately closed 
   * all class attributes should become className
+  * multiple children elements should be grouped in a parent element or Fragment
 
 ======
 Naming Conventions & Casing 
@@ -245,8 +246,15 @@ Core Concepts of React
   Events [DONE]
   Lists & Keys [DONE]
   Conditional Rendering [DONE]
-  Styling 
+  Styling [DONE]
 
+Routing
+----  
+  Basic Routes 
+    * url 
+    * url param
+    * query param 
+  Nested Routing [TODO]
 
 Advanced Concepts 
 ----
@@ -258,12 +266,10 @@ Advanced Concepts
   ...
   ...
 
-Routing
-----  
 
 Features
 ---
-  1. Netflix 
+  1. Netflix [DONE]
   2. CRU(D) App  (User management app)
   3. Todo App 
   4. E-Com Style of App (Product Listing & Add to cart)
@@ -306,8 +312,94 @@ src/
     IShow.tsx
 
 
+SPA characteristics
+-------
 
-    
-    
+1. Pages should NOT refresh [DONE]
+2. URL should change [DONE]
+3. History should be maintained w/o page refresh [DONE]
+4. Retain Header and Footer [DONE]
+5. Section in between header and footer should show contextual updates [DONE]
+6. Active menu should be set [TODO]
+7. Page Title should also be updated [TODO]
+    Refer: https://www.npmjs.com/package/react-helmet-async
+
+Routing in ReactJS
+----  
+  Step 1: 
+    npm i react-router-dom
+
+    3 types of router concepts (BrowserRouter, HashRouter, MemoryRouter)
   
+  Step 2: 
+    Let's Identify the urls for the menus 
+      Home             localhost:3000/
+      Netflix          localhost:3000/netflix
+      Manage Users     localhost:3000/users
+      Todos            localhost:3000/todos
+      Products         localhost:3000/products
+      About            localhost:3000/about-us
+      Contact          localhost:3000/contact-us
+      Login            localhost:3000/login
 
+  Step 3: Let's setup the above urls in MenuList.
+
+  Step 4: Check the app. URL will change. Page will refresh. 
+    For the above menus to work we need the necessary components
+
+    Let's find out matching components for the urls
+
+    localhost:3000/             HomePage            
+    localhost:3000/netflix      NetflixPage          
+    localhost:3000/users        UsersPage            
+    localhost:3000/todos        TodosPage            
+    localhost:3000/products     ProductsPage         
+    localhost:3000/about-us     AboutPage            
+    localhost:3000/contact-us   ContactPage           
+    localhost:3000/login        LoginPage            
+
+    Let's create the necessary components
+
+  Step 5: 
+  ----
+    The whole app should be under the control of BrowserRouter of react-router-dom 
+
+    Then, Let's config the routes in App component in b/w header and footer 
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/netflix" element={<NetflixPage />} />
+        <Route path="/users" element={<UsersPage />} />
+        <Route path="/about-us" element={<AboutPage/>} />
+      </Routes>
+    
+  Step 6: 
+  ---
+    Check the app. Pages are still refreshing. Let's fix. 
+    Replace all a href with Link to of 'react-router-dom'
+
+    like the following 
+    <Link className="nav-link active" to="/">
+      Home
+    </Link>
+
+
+-----
+
+
+
+Users Management CRUD App 
+----
+C
+  Add User      localhost:3000/users/add        AddUser
+
+R
+  List Users    localhost:3000/users            UsersPage 
+
+R
+  User Details  localhost:3000/users/1          UsersDetails
+
+U
+  User Details  localhost:3000/users/1/edit     EditUser
+
+D
+  Delete Details  localhost:3000/users/1        UsersDetails

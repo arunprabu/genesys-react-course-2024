@@ -2,9 +2,14 @@
 2. Display image in Hero block of the HomePage.tsx [REVIEWED]
   Refer: https://undraw.co/illustrations
   Refer: https://www.manypixels.co/gallery
-3. Implement Child to Parent Component Communication 
-    in RecommendedShow to RecommendedShowList.
-    pass the event handler as prop into the child comp 
-      and call the event handler from child comp 
-        then, update the ui
+3. Implement Child (RecommendedShow) to Parent Component (RecommendedShowList) Communication 
+   Step 1. pass the event handler as prop into the child comp 
+     Step 2. and call the event handler from child comp 
+       Step 3.  then, update the ui
     
+4. Explore styled-components in Subscription component
+5. Active menu should be set in our app. 
+6. Page Title should also be updated 
+    Refer: https://www.npmjs.com/package/react-helmet-async
+7.  programmatically redirect to Netflix and Users in HomePage component
+  Refer: https://www.squash.io/how-to-navigate-using-react-router-programmatically/

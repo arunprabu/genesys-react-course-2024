@@ -1,44 +1,48 @@
+import { Link } from "react-router-dom";
+
 //  Functional component with Arrow function
 const MenuList: React.FC = () => {
   return (
     <ul className="navbar-nav me-auto mb-2 mb-md-0">
       <li className="nav-item">
-        <a className="nav-link active" href="#">
+        <Link className="nav-link active" to="/">
           Home
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/netflix">
           Netflix
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/users">
           Manage Users
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/todos">
           Todos
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/products">
           Products
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/about-us">
           About
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link">Contact Us</a>
+        <Link className="nav-link" to="/contact-us">
+          Contact Us
+        </Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">
+        <Link className="nav-link" to="/login">
           Login
-        </a>
+        </Link>
       </li>
     </ul>
   );

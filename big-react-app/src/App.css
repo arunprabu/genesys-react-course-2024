@@ -1,0 +1,8 @@
+/* is this component specific css? - NO 
+  the styles are going to make impact in App component and its' descendants 
+*/
+
+.green-text {
+  color: green;
+  font-size: 32px;
+}

@@ -68,12 +68,8 @@ const RecommendedShowList: React.FC = () => {
       {/* lists a.k.a looping */} 
       {shows.map((show, index) => {
         return (
-          // Make the following as child comp -- RecommendedShow
-          <div
-            className="col-md-3"
-            key={show.id}
-            callback={handleManageWatchlist}
-          >
+          // Make the following as child comp -- RecommendedShow 
+          <div className="col-md-3" key={show.id}>
             <div className="card">
               <img
                 src={show.thumbnailUrl}
@@ -91,14 +87,13 @@ const RecommendedShowList: React.FC = () => {
                 </li>
               </ul>
               <div className="card-body">
-                <button
-                  className="btn btn-success"
-                  onClick={() => {
-                    handleManageWatchlist(index); // passing param to event handler
-                  }}
-                >
+                <button className="btn btn-success" onClick={ () => {
+                  handleManageWatchlist(index); // passing param to event handler
+                }}>
                   {/* Conditional Rendering inside JSX */}
-                  {show.isInWatchlist ? "In Watchlist" : "Add to Watchlist"}
+                  {
+                    show.isInWatchlist? 'In Watchlist': 'Add to Watchlist'
+                  }
                 </button>
               </div>
             </div>

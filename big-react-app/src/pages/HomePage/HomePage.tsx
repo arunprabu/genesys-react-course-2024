@@ -8,7 +8,8 @@ const HomePage: React.FC = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, architecto. Similique aliquam, repudiandae exercitationem adipisci ea, asperiores quidem nemo, ratione magni expedita porro. Voluptate similique neque suscipit dolores, eius illum!
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
+          <button type="button" 
+            className="btn btn-primary btn-lg px-4 gap-3">
             Browse Netflix
           </button>
           <button
