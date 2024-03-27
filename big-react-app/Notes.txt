@@ -386,7 +386,6 @@ Routing in ReactJS
 -----
 
 
-
 Users Management CRUD App 
 ----
 C
@@ -403,3 +402,12 @@ U
 
 D
   Delete Details  localhost:3000/users/1        UsersDetails
+
+
+Http methods
+---
+GET   - fetching data 
+POST  - creating data 
+PUT /PATCH -- updating data 
+DELETE -- deleting data 
+

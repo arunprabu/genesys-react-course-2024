@@ -7,9 +7,9 @@
      Step 2. and call the event handler from child comp 
        Step 3.  then, update the ui
     
-4. Explore styled-components in Subscription component
+4. Explore styled-components in Subscription component [NOT a top priority]
 5. Active menu should be set in our app. 
 6. Page Title should also be updated 
     Refer: https://www.npmjs.com/package/react-helmet-async
-7.  programmatically redirect to Netflix and Users in HomePage component
+7. programmatically redirect to Netflix and Users in HomePage component
   Refer: https://www.squash.io/how-to-navigate-using-react-router-programmatically/
