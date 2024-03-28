@@ -250,19 +250,26 @@ Core Concepts of React
 
 Routing
 ----  
-  Basic Routes 
-    * url 
-    * url param
-    * query param 
+  Basic Routes [DONE]
+    * url [DONE]
+    * url param [DONE]
+    * query param [DONE]
   Nested Routing [TODO]
 
 Advanced Concepts 
 ----
-  Forms
-  API Calls 
+  Forms [DONE]
+  API Calls [DONE]
   Context 
-  Fragments
-  Hooks
+  Fragments [DONE]
+  Hooks 
+    useState 
+    useEffect
+
+    useReducer 
+    useRef 
+
+    useContext
   ...
   ...
 
@@ -270,10 +277,18 @@ Advanced Concepts
 Features
 ---
   1. Netflix [DONE]
-  2. CRU(D) App  (User management app)
-  3. Todo App 
-  4. E-Com Style of App (Product Listing & Add to cart)
-  5. Authentication
+  2. CRU(D) App  (User management app) [DONE]
+  3. Todo App  [Thursday]
+  4. E-Com Style of App (Product Listing & Add to cart) [Monday]
+  5. Authentication & Authorization [Will complete by tuesday]
+
+
+Other Topics
+---
+  i18n and l10n [tuesday]
+  unit testing [wed]
+  build and deployment [thursday]
+  Redux-toolkit [Friday]
 
 
 Project Structure

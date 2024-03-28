@@ -14,6 +14,8 @@ import UsersPage from './pages/UsersPage/UsersPage';
 import AboutPage from './pages/AboutPage/AboutPage';
 import AddUser from './pages/UsersPage/AddUser';
 import UserDetails from './pages/UsersPage/UserDetails';
+import EditUserDetails from './pages/UsersPage/EditUserDetails';
+import TodosPage from './pages/TodosPage/TodosPage';
 
 const App: React.FC = () => {
   // App component is the ideal place for us to build the layout
@@ -29,7 +31,11 @@ const App: React.FC = () => {
           <Route path="/netflix" element={<NetflixPage />} />
           <Route path="/users" element={<UsersPage />} />
           <Route path="/users/add" element={<AddUser />} />
-          <Route path="/users/1" element={<UserDetails />} />
+          {/* Setting up routing congi with url param -- userId is the url param */}
+          <Route path="/users/:userId" element={<UserDetails />} />
+          <Route path="/users/:userId/edit" element={<EditUserDetails />} />
+
+          <Route path="/todos" element={<TodosPage />} />
           <Route path="/about-us" element={<AboutPage />} />
         </Routes>
       </main>

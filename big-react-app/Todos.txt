@@ -13,3 +13,29 @@
     Refer: https://www.npmjs.com/package/react-helmet-async
 7. programmatically redirect to Netflix and Users in HomePage component
   Refer: https://www.squash.io/how-to-navigate-using-react-router-programmatically/
+
+8. Implement validation in AddUser component using react-hook-form 
+9. Implment Nested Routing in AboutPage component
+
+    Required Urls for Nested Routing 
+    -----
+    localhost:3000/about-us/     -- AboutPage component in between header and footer 
+    localhost:3000/about-us/team     -- Inside AboutPage component -- Team component should be displayed
+    localhost:3000/about-us/careers     -- Inside AboutPage component -- Careers component should be displayed
+    localhost:3000/about-us/history     -- Inside AboutPage component -- history component should be displayed
+
+10. implement loader and handle error in UserDetails component
+
+11. Complete EditUserDetails.tsx 
+
+12. Complete Delete User from UserDetails component 
+      upon deletion successful, 
+        close the modal thru program and 
+          redirect the user to all users page. 
+
+13. Try out react-toastify 
+    Refer: https://fkhadra.github.io/react-toastify/introduction
+
+14. Avoid code duplicate MenuList comp by having an array of menu objects
+
+
