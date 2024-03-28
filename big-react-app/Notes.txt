@@ -266,8 +266,8 @@ Advanced Concepts
     useState 
     useEffect
 
-    useReducer 
-    useRef 
+    useReducer [DONE]
+    useRef [DONE]
 
     useContext
   ...
@@ -278,7 +278,7 @@ Features
 ---
   1. Netflix [DONE]
   2. CRU(D) App  (User management app) [DONE]
-  3. Todo App  [Thursday]
+  3. Todo App  [DONE]
   4. E-Com Style of App (Product Listing & Add to cart) [Monday]
   5. Authentication & Authorization [Will complete by tuesday]
 

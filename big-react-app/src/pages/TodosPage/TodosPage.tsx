@@ -9,7 +9,7 @@ const TodosPage: React.FC = () => {
   };
 
   // to read todo input data -- let's use useRef 
-  const todoInput = useRef(null);
+  const todoInput  = useRef<HTMLInputElement>(null);
   console.log(todoInput);
 
   const [todoState, todoDispatch] = useReducer(todoReducer, []);
@@ -33,17 +33,19 @@ const TodosPage: React.FC = () => {
   
   const handleAddTodo = () => {
     console.log('Adding todo');
-    // console.log(todoInput.current.value)
-    // before dispatch connect to rest api and get this saved;
-    // calling dispatch with action object
-    todoDispatch({
-      type: "ADD_TODO",
-      payload: {
-        id: new Date().toISOString(),
-        task: todoInput.current.value,
-        isCompleted: false
-      }
-    });
+    if(todoInput.current != null){
+      console.log(todoInput.current.value);
+      // before dispatch connect to rest api and get this saved;
+      // calling dispatch with action object
+      todoDispatch({
+        type: "ADD_TODO",
+        payload: {
+          id: new Date().toISOString(),
+          task: todoInput.current.value,
+          isCompleted: false,
+        },
+      });
+    }
   }
 
   console.log("2. Program Ended");
