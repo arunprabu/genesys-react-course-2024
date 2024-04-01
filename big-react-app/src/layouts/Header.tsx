@@ -1,6 +1,7 @@
 // Functional Component with Named Function
 
 import MenuList from "./MenuList";
+import { useCart } from "../contexts/CartContext";
 
 /** skeleton of the component
  * component can have imports,
@@ -9,6 +10,9 @@ import MenuList from "./MenuList";
  */
 
 const Header: React.FC = () => {
+  const cartContext = useCart();
+  console.log(cartContext);
+
   // must return JSX
   return (
     <header>
@@ -30,6 +34,9 @@ const Header: React.FC = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
+            <button className="btn btn-danger">
+              Cart ({cartContext?.cartItems.length})
+            </button>
           </div>
         </div>
       </nav>

@@ -2,51 +2,52 @@ import { useEffect, useReducer, useRef } from "react";
 import todoReducer from "../../reducers/todoReducer";
 
 const TodosPage: React.FC = () => {
-  console.log('1. Program Started');
+  console.log("1. Program Started");
   const todoItemStyle = {
     width: "72%",
     display: "inline-block",
   };
 
-  // to read todo input data -- let's use useRef 
-  const todoInput  = useRef<HTMLInputElement>(null);
+  // to read todo input data -- let's use useRef
+  const todoInput = useRef<HTMLInputElement>(null);
   console.log(todoInput);
 
-  const [todoState, todoDispatch] = useReducer(todoReducer, []);
-  // all todos will be in todoState
-  // todoDispatch is a fn to update the todoState
+  const [todoState, todosDispatch] = useReducer(todoReducer, []);
+  console.log(todoState);
 
-  useEffect(() => {
-    // connect to the rest api on load
-    const todos = [
-      {
-        id: "34213242", 
-        task: 'random todo',
-        isCompleted: false
-      }
-    ];
-    todoDispatch({
+  useEffect(()=> {
+    todosDispatch({
       type: "GET_TODOS",
-      payload: todos,
-    });
-  }, []);
-  
-  const handleAddTodo = () => {
-    console.log('Adding todo');
-    if(todoInput.current != null){
-      console.log(todoInput.current.value);
-      // before dispatch connect to rest api and get this saved;
-      // calling dispatch with action object
-      todoDispatch({
-        type: "ADD_TODO",
-        payload: {
-          id: new Date().toISOString(),
-          task: todoInput.current.value,
+      payload: [
+        {
+          id: "123456",
+          task: "my todo 1",
           isCompleted: false,
         },
+        {
+          id: "o987654",
+          task: "my todo 2",
+          isCompleted: false,
+        },
+      ],
+    });
+  }, []);
+
+
+  const handleAddTodo = () => {
+    if (todoInput.current != null) {
+      const todo = {
+        id: new Date().toString(),
+        task: todoInput.current.value,
+        isCompleted: false,
+      };
+      console.log(todo);
+      todosDispatch({
+        type: "ADD_TODO",
+        payload: todo,
       });
-    }
-  }
+    } 
+  };
 
   console.log("2. Program Ended");
   return (

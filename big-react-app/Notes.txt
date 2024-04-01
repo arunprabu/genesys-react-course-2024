@@ -263,13 +263,15 @@ Advanced Concepts
   Context 
   Fragments [DONE]
   Hooks 
-    useState 
-    useEffect
+    useState [DONE]
+    useEffect [DONE]
 
     useReducer [DONE]
     useRef [DONE]
 
-    useContext
+    useContext [DONE]
+
+    Custom Hook [DONE]
   ...
   ...
 
@@ -279,8 +281,8 @@ Features
   1. Netflix [DONE]
   2. CRU(D) App  (User management app) [DONE]
   3. Todo App  [DONE]
-  4. E-Com Style of App (Product Listing & Add to cart) [Monday]
-  5. Authentication & Authorization [Will complete by tuesday]
+  4. E-Com Style of App (Product Listing & Add to cart) [DONE]
+  5. Authentication & Authorization [Tomorrow]
 
 
 Other Topics
@@ -426,3 +428,34 @@ POST  - creating data
 PUT /PATCH -- updating data 
 DELETE -- deleting data 
 
+
+Reducer
+----
+  * is function that must take in two params (state, action)
+  * this fn must return state 
+
+  * action is an object. 
+    * it must have type property 
+    * it can have payload property, which is optional
+
+    const action = {
+      type: '',
+      payload: 'dafgdhgfhjghdffghgj"  // optional
+    }
+
+possible action types in a todos app
+  * GET_TODOS 
+  * ADD_TODO 
+  * EDIT_TODO 
+  * DELETE_TODO
+  * COMPLETE_TODO
+  * SEARCH_TODOS
+
+
+  function xyz(state, action) {
+    // based on the action type 
+    return state;
+  }
+
+
+  

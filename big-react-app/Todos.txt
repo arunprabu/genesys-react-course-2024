@@ -15,7 +15,7 @@
   Refer: https://www.squash.io/how-to-navigate-using-react-router-programmatically/
 
 8. Implement validation in AddUser component using react-hook-form 
-9. Implment Nested Routing in AboutPage component
+9. Implement Nested Routing in AboutPage component
 
     Required Urls for Nested Routing 
     -----
