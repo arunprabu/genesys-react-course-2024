@@ -275,6 +275,13 @@ Advanced Concepts
   ...
   ...
 
+Rules of Hooks 
+---
+  1. Only Call Hooks at the Top Level
+      Don’t call Hooks inside loops, conditions, or nested functions. 
+  2. Only Call Hooks from React Functional components
+      Don’t call Hooks from regular JavaScript functions.
+
 
 Features
 ---
@@ -282,7 +289,7 @@ Features
   2. CRU(D) App  (User management app) [DONE]
   3. Todo App  [DONE]
   4. E-Com Style of App (Product Listing & Add to cart) [DONE]
-  5. Authentication & Authorization [Tomorrow]
+  5. Authentication & Authorization [Tuesday]
 
 
 Other Topics

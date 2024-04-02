@@ -37,5 +37,3 @@
     Refer: https://fkhadra.github.io/react-toastify/introduction
 
 14. Avoid code duplicate MenuList comp by having an array of menu objects
-
-
