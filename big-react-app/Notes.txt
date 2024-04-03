@@ -289,15 +289,20 @@ Features
   2. CRU(D) App  (User management app) [DONE]
   3. Todo App  [DONE]
   4. E-Com Style of App (Product Listing & Add to cart) [DONE]
-  5. Authentication & Authorization [Tuesday]
+  5. Authentication & Authorization [DONE]
 
 
 Other Topics
 ---
-  i18n and l10n [tuesday]
-  unit testing [wed]
-  build and deployment [thursday]
-  Redux-toolkit [Friday]
+  i18n and l10n [DONE]
+  Debugging [DONE]
+  Error Boundary [DONE]
+  Lazy Loading and Suspense [DONE]
+  Performance Tuning [DONE]
+  build and deployment [Today]
+  unit testing [Thursday and Friday]
+  
+  Redux-toolkit [Later]
 
 
 Project Structure
@@ -465,4 +470,78 @@ possible action types in a todos app
   }
 
 
-  
+
+Component Re-Rendering Related
+====
+  In Normal Scenario
+  -------
+    To prevent unnecessary re-renders in functional components when using React, 
+    you can use React.memo. 
+    React.memo is a higher-order component that will only re-render the 
+    wrapped component if its props have changed. 
+    This is useful for optimizing performance in scenarios 
+    where a parent component's state change doesn't necessarily affect the child component.
+
+    Use React.memo to prevent a component from re-rendering unless its props change.
+
+    React.memo and useMemo are not SAME.
+    Also Learn about useCallback 
+
+    Example with React.Memo
+    ---
+      import React from 'react';
+
+      // ChildComp1 defined as a functional component wrapped with React.memo
+      const ChildComp1 = React.memo((props) => {
+        console.log('Rendering ChildComp1');
+        // Your component logic
+        return (
+          <div>
+            {/* Your component UI */}
+            Child Component Content
+          </div>
+        );
+      });
+
+      export default ChildComp1;
+
+
+  In Context API 
+  ----
+  In React, a component will re-render in response to context changes only 
+  if it directly uses the context value that has changed. 
+
+=====
+
+
+Reference For useCallback hook:
+  https://github.com/arunprabu/netflix-plus-bosch-nov2023/blob/master/src/components/NewsMedia.tsx
+
+Reference For useMemo hook:
+  https://github.com/arunprabu/netflix-plus-bosch-nov2023/blob/master/src/components/SquareCalculator.tsx
+
+both are used here. 
+  https://github.com/arunprabu/netflix-plus-bosch-nov2023/blob/master/src/pages/AboutPage.tsx
+
+=============
+
+i18n 
+---
+  Making sure the website's content showing up in multiple languages
+  Making sure your website content is accessible to different language groups across globe .
+
+  en: red color, center, 
+  fr: couleur rouge
+
+l10n 
+---
+  Making sure the website's content is showing up for specific region. (locale-specific)
+  Making sure your website content is localized for different regions of same language group 
+
+  uk: red colour, centre
+  au: red color, 
+  in: red color
+  us: red color
+
+npm i i18next react-i18next i18next-browser-languagedetector
+

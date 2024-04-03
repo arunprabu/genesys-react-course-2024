@@ -52,6 +52,11 @@ const MenuList: React.FC = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/admin">
+              Admin
+            </Link>
+          </li>
+          <li className="nav-item">
             <button
               className="btn btn-link text-secondary"
               onClick={() => {

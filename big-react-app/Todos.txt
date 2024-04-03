@@ -37,3 +37,9 @@
     Refer: https://fkhadra.github.io/react-toastify/introduction
 
 14. Avoid code duplicate MenuList comp by having an array of menu objects
+
+15. Hide the Admin menu from MenuList if the user role is not SUPER_ADMIN
+
+
+
+=========

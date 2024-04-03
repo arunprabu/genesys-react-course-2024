@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
             <button className="btn btn-danger">
-              Cart ({cartContext?.cartItems.length})
+              Cart ({cartContext?.cartItems?.length})
             </button>
           </div>
         </div>

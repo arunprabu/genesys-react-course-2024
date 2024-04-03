@@ -8,9 +8,11 @@
     4. CSS Modules [RECOMMENDED] [TODO]
     5. styled-components or @emotion [TRY IT OUT]
 */
+import React from 'react';
 import './Subscription.css'; // importing external css
 
-const Subscription: React.FC = () => {
+const Subscription: React.FC = React.memo(() => {
+  console.log('Is it Re-Rendering');
   const subscriptionStyles = {
     renewStyles: {
       backgroundColor: "yellow",
@@ -52,6 +54,6 @@ const Subscription: React.FC = () => {
       <button style={subscriptionStyles.renewBtnStyles}>RENEW NOW</button>
     </div>
   );
-}
+})
 
 export default Subscription

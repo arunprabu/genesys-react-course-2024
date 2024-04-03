@@ -26,7 +26,7 @@ const LoginPage: React.FC = () => {
       // assuming login is successful -- we will get JWT token
       console.log(response.data);
       // the JWT token should be saved in cookie/ local storage /session storage
-      saveToken(response.data.token);
+      saveToken(response.data.token, "SUPER_ADMIN");
       // POST login, we will redirect the user to some page -- ex: netflix
       navigate("/netflix"); // static implementation
     } catch (err) {
