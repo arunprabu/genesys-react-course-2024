@@ -5,7 +5,7 @@ const TodosPage: React.FC = () => {
   console.log("1. Program Started");
   const todoItemStyle = {
     width: "72%",
-    display: "inline-block",
+    display: "inline-block"
   };
 
   // to read todo input data -- let's use useRef
@@ -22,28 +22,28 @@ const TodosPage: React.FC = () => {
         {
           id: "123456",
           task: "my todo 1",
-          isCompleted: false,
+          isCompleted: false
         },
         {
           id: "o987654",
           task: "my todo 2",
-          isCompleted: false,
-        },
-      ],
+          isCompleted: false
+        }
+      ]
     });
   }, []);
 
   const handleAddTodo = () => {
-    if (todoInput.current != null) {
+    if (todoInput.current !== null) {
       const todo = {
         id: new Date().toString(),
         task: todoInput.current.value,
-        isCompleted: false,
+        isCompleted: false
       };
       console.log(todo);
       todosDispatch({
         type: "ADD_TODO",
-        payload: todo,
+        payload: todo
       });
     }
   };
