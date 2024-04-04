@@ -2,7 +2,7 @@ import MenuList from "./MenuList";
 
 const Footer: React.FC = () => {
   const copyrightYear = 2024;
-  const developerName = "Arun";
+  const developerName = "Arun Vijayarengan";
 
   return (
     <footer className="text-center">
