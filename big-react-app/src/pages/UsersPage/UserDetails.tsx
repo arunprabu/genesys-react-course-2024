@@ -29,6 +29,7 @@ const UserDetails: React.FC = () => {
     console.log("Inside useEffect");
 
     getUserDetails();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -299,7 +299,7 @@ Other Topics
   Error Boundary [DONE]
   Lazy Loading and Suspense [DONE]
   Performance Tuning [DONE]
-  build and deployment [Today]
+  build and deployment [Tomorrow]
   unit testing [Thursday and Friday]
   
   Redux-toolkit [Later]

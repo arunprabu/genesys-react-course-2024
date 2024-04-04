@@ -1,8 +1,8 @@
 import MenuList from "./MenuList";
 
-const Footer: React.FC = () =>  {
+const Footer: React.FC = () => {
   const copyrightYear = 2024;
-  const developerName = 'Arun';
+  const developerName = "Arun";
 
   return (
     <footer className="text-center">
@@ -13,6 +13,6 @@ const Footer: React.FC = () =>  {
       </p>
     </footer>
   );
-}
+};
 
 export default Footer;

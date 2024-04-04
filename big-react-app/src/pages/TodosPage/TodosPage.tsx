@@ -15,7 +15,7 @@ const TodosPage: React.FC = () => {
   const [todoState, todosDispatch] = useReducer(todoReducer, []);
   console.log(todoState);
 
-  useEffect(()=> {
+  useEffect(() => {
     todosDispatch({
       type: "GET_TODOS",
       payload: [
@@ -33,7 +33,6 @@ const TodosPage: React.FC = () => {
     });
   }, []);
 
-
   const handleAddTodo = () => {
     if (todoInput.current != null) {
       const todo = {
@@ -46,7 +45,7 @@ const TodosPage: React.FC = () => {
         type: "ADD_TODO",
         payload: todo,
       });
-    } 
+    }
   };
 
   console.log("2. Program Ended");

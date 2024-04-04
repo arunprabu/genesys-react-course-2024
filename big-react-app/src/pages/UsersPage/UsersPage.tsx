@@ -35,7 +35,7 @@ const UsersPage: React.FC = () => {
         console.log(err);
         setIsError(true);
       })
-      .finally( () => {
+      .finally(() => {
         console.log('Inside Finally');
         setIsLoading(false);
       });
