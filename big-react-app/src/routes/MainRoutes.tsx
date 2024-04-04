@@ -7,6 +7,7 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ProtectedRoutes from "./ProtectedRoutes";
+import UnitTestingDemoPage from "../pages/UnitTestingDemoPage/UnitTestingDemoPage";
 
 // Lazy Loading the following components
 const NetflixPage = lazy(() => import("../pages/NetflixPage/NetflixPage"));
@@ -43,12 +44,13 @@ const MainRoutes = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/unit-testing-demo" element={<UnitTestingDemoPage />} />
           <Route path="/auth/login" element={<LoginPage />} />
+
           <Route
             path="/auth/"
             element={<Navigate to="/auth/login" replace />}
           />
-
           {/* The following URLs need login  -- Protected Routes */}
           <Route element={<ProtectedRoutes />}>
             <Route path="/netflix" element={<NetflixPage />} />

@@ -22,6 +22,11 @@ const MenuList: React.FC = () => {
           Contact Us
         </Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/unit-testing-demo">
+          Unit Testing Demo
+        </Link>
+      </li>
 
       {!isAuthenticated ? (
         <li className="nav-item">
