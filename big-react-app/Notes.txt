@@ -726,3 +726,54 @@ Steps to Setup JEST and RTL in react project based vite
   Step 6: 
     Try 
       npm run test 
+
+Learn about which RTL API to use? 
+https://testing-library.com/docs/queries/about/#priority
+
+======
+Topics 
+---
+  Testing JSX [DONE]
+    Testing Props [DONE]
+    Testing Styles 
+      Testing Inline Styles [DONE]
+      Testing CSS Class (TODO)
+    Testing Events [DONE]
+      https://github.com/arunprabu/react-unit-testing-sep2022-batch2/blob/master/src/components/Counter/Counter.test.js
+    Testing States [DONE]
+
+    Snapshot Testing [DONE]
+      DO NOT TRY THIS FOR THE FOLLOWING 
+      ---
+        1. If the component has dynamic data 
+        2. When the component is incomplete
+
+    Testing Reducers [Repo Link]
+      https://github.com/arunprabu/react-unit-testing-sep2022-batch2/blob/master/src/components/Reminders/Reminders.test.js
+    Testing Contexts [Repo Link]
+      https://github.com/arunprabu/react-unit-testing-sep2022-batch2/blob/master/src/components/MyProfile/MyProfile.test.js
+
+    Testing Forms [TODO: Repo Link]
+      https://github.com/arunprabu/react-unit-testing-sep2022-batch2/blob/master/src/components/ContactForm/ContactForm.test.js
+
+    Testing Routes [TODO]
+
+  Testing API 
+    Mocks [DONE]
+    Spies [MONDAY]
+    Stubs [TODO]
+
+  Code Coverage [MONDAY]
+  ----
+    npm run coverage 
+
+
+/* 3 Challenges / Disadv of Testing the component with Rest API calls
+  1. Time consuming
+  2. Availability of REST API is a concern (may be in dev, may be down)
+  3. No guarantee for the sample data like this 'delectus aut autem' to be present
+*/ 
+
+
+  
+  

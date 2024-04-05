@@ -1,7 +1,7 @@
 // Test Pattern: AAA (Arrange, Act, Assert)
 // Arrange -- Let's arrange the necessary tools for testing the comp 
 import { render, screen } from "@testing-library/react"; // importing from RTL
-import UnitTestingDemoPage from "../../../pages/UnitTestingDemoPage/UnitTestingDemoPage";
+import UnitTestingDemoPage from "../../../../pages/UnitTestingDemoPage/UnitTestingDemoPage";
 
 // Act 
 // Let's write the test cases / test specs / tests  
