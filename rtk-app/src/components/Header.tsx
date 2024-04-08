@@ -1,10 +1,6 @@
-import { useSelector } from "react-redux"
 import { Link, NavLink } from "react-router-dom"
-import { RootState } from "../app/store"
 
 const Header = () => {
-  const productsState = useSelector((state: RootState) => state.products)
-
   return (
     <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div className="col-md-3 mb-2 mb-md-0">
@@ -30,16 +26,6 @@ const Header = () => {
           <NavLink to="/users" className="nav-link px-2">
             Users
           </NavLink>
-        </li>
-        <li>
-          <NavLink to="/products" className="nav-link px-2">
-            Products
-          </NavLink>
-        </li>
-        <li>
-          <Link to="/cart" className="btn btn-danger">
-            Cart ({productsState.cartItems.length})
-          </Link>
         </li>
       </ul>
     </header>

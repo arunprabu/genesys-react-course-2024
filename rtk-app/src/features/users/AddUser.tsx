@@ -1,10 +1,9 @@
 import React, { useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { User, addUserAsync } from "./usersSlice"
+import { useSelector } from "react-redux"
+import { User } from "./usersSlice"
 import { RootState } from "../../app/store"
 
 const AddUser: React.FC = () => {
-  const dispatch: any = useDispatch()
   const usersState = useSelector((state: RootState) => state.users)
 
   const [formData, setFormData] = useState<User>({
@@ -16,8 +15,6 @@ const AddUser: React.FC = () => {
   const handleAddUser = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     console.log(formData)
-    // let's submit the form data to the rest api
-    dispatch(addUserAsync(formData))
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
