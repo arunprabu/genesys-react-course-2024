@@ -75,3 +75,17 @@ App
   Users 
       * subscribe to the store and display the data
   
+
+
+
+if store has to be get any new data, if must call dispatch
+store can be updated from slice in extraReducers 
+
+
+
+
+react -- library 
+react-redux -- binding tool to bind library with framework
+  to update store -- comp must dispatch 
+  to get store data -- comp must use selector
+redux -- core state mangement framework  -- HAS TO STORE

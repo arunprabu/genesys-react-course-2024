@@ -1,27 +1,28 @@
 import React, { useState } from "react"
-import { useSelector } from "react-redux"
-import { User } from "./usersSlice"
-import { RootState } from "../../app/store"
+import { useDispatch } from "react-redux"
+import { addUserAsync } from "./usersSlice"
 
 const AddUser: React.FC = () => {
-  const usersState = useSelector((state: RootState) => state.users)
-
-  const [formData, setFormData] = useState<User>({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
   })
 
+  const dispatch = useDispatch()
+
   const handleAddUser = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     console.log(formData)
+    // Let's send the form data to the rest api
+    dispatch(addUserAsync(formData))
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target
     setFormData((prevData: any) => ({
       ...prevData,
-      [name]: value,
+      [name]: value, // computer property in js object
     }))
   }
 
@@ -69,7 +70,8 @@ const AddUser: React.FC = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          {usersState.isLoading ? "Submitting..." : "Submit"}
+          Submit
+          {/* {usersState.isLoading ? "Submitting..." : "Submit"} */}
         </button>
       </form>
     </>

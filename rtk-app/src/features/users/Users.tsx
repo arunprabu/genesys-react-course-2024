@@ -1,8 +1,25 @@
 import { useEffect } from "react"
 import AddUser from "./AddUser"
+import { fetchUsersAsync } from "./usersSlice"
+import { useDispatch, useSelector } from "react-redux"
+import { RootState } from "../../app/store"
 
 const Users = () => {
-  useEffect(() => {}, [])
+  const dispatch: any = useDispatch()
+
+  // we are using useSelector to subscribe to store updates
+  const usersState: any = useSelector((state: RootState) => {
+    console.log(state) // the entire store data..
+    // our users comp needs only users property from store object
+    return state.users
+  })
+
+  useEffect(() => {
+    console.log("1. Inside useEffect")
+    // ideal place for rest api calls
+    // dispatching with async fn to update the store
+    dispatch(fetchUsersAsync())
+  }, [])
 
   return (
     <div className="row">
@@ -14,24 +31,32 @@ const Users = () => {
       <div className="col-md-8">
         <h2>List Users</h2>
         {/* Showing the loader */}
-        <div className="spinner spinner-border"></div>
+        {usersState.isLoading && <div className="spinner spinner-border"></div>}
 
         {/* is error occurred */}
-        <div className="alert alert-danger">error</div>
+        {usersState.isError && (
+          <div className="alert alert-danger">
+            Some Error Occurred. Try again later!
+          </div>
+        )}
 
         {/* is we get the usersList data */}
         <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">John</h5>
-                <h6 className="card-subtitle mb-2 text-body-secondary">
-                  E-Mail: a@g.com
-                </h6>
-                <p className="card-text">Phone: 345677</p>
+          {usersState.userList.map((user: any) => {
+            return (
+              <div className="col-md-4" key={user.id}>
+                <div className="card">
+                  <div className="card-body">
+                    <h5 className="card-title">{user.name}</h5>
+                    <h6 className="card-subtitle mb-2 text-body-secondary">
+                      E-Mail: {user.email}
+                    </h6>
+                    <p className="card-text">Phone: {user.phone}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            )
+          })}
         </div>
       </div>
     </div>
