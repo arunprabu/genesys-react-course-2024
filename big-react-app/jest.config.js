@@ -9,14 +9,14 @@ export default {
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   transformIgnorePatterns: ["/node_modules/(?!(axios)/)"],
   collectCoverageFrom: [
-    "src/lib/**/*.{js,jsx,ts,tsx}",
+    "src/**/*.{js,jsx,ts,tsx}",
     "!<rootDir>/node_modules/",
     "!<rootDir>/config/",
+    "!<rootDir>/assets/",
     "!<rootDir>/src/stories/*.{js,jsx,ts,tsx}",
     "!<rootDir>/src/main.tsx",
-    "!<rootDir>/src/lib/**/index.tsx" // Exclude all index.tsx files within /lib
+    "!<rootDir>/src/__tests__/*.tsx" // Exclude all .tsx files
   ],
-  coverageDirectory: "<rootDir>/docs/coverage", // Specifying the output directory here
   coverageThreshold: {
     global: {
       branches: 80,

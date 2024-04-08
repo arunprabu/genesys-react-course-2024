@@ -760,7 +760,9 @@ Topics
 
   Testing API 
     Mocks [DONE]
-    Spies [MONDAY]
+    Spies [MONDAY]  
+      Refer: https://github.com/arunprabu/react-unit-testing-sep2022-batch2/tree/master/src/components/Posts
+      
     Stubs [TODO]
 
   Code Coverage [MONDAY]
@@ -775,5 +777,4 @@ Topics
 */ 
 
 
-  
   
